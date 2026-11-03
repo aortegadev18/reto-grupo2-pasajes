@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruta Andina - Venta de Pasajes</title>
+
+  <style>
+    /* ===== Estilos generales ===== */
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f4f4f4;
+      color: #333333;
+    }
+
+    h1, h2, h3 {
+      color: #0b3d5c;
+    }
+
+    /* ===== Encabezado y menú ===== */
+    header {
+      background-color: #0b3d5c;
+      padding: 15px 30px;
+      text-align: center;
+    }
+
+    header h1 {
+      color: #ffffff;
+      margin: 0;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #f2a516;
+    }
+
+    /* ===== Contenido principal ===== */
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    section {
+      background-color: #ffffff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+
+    /* Portada */
+    #inicio {
+      background-color: #13628f;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    #inicio h2 {
+      color: #ffffff;
+      font-size: 32px;
+    }
+
+    /* ===== Tarjetas de rutas ===== */
+    .rutas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    article {
+      flex: 1;
+      min-width: 250px;
+      border: 1px solid #dddddd;
+      border-radius: 8px;
+      padding: 15px;
+    }
+
+    .precio {
+      font-size: 24px;
+      font-weight: bold;
+      color: #1f8a5b;
+    }
+
+    /* ===== Botones ===== */
+    button,
+    .boton {
+      background-color: #f2a516;
+      color: #0b3d5c;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    button:hover,
+    .boton:hover {
+      background-color: #d68d00;
+    }
+
+    /* ===== Tabla de horarios ===== */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid #dddddd;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #0b3d5c;
+      color: #ffffff;
+    }
+
+    /* ===== Formulario ===== */
+    fieldset {
+      border: 1px solid #dddddd;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    legend {
+      font-weight: bold;
+      color: #0b3d5c;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+
+    /* ===== Pie de página ===== */
+    footer {
+      background-color: #0b3d5c;
+      color: #ffffff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* ===== Celulares ===== */
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 8px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ENCABEZADO: nombre de la cooperativa y menú -->
+  <header>
+    <h1>Cooperativa Ruta Andina</h1>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#rutas">Rutas</a>
+      <a href="#horarios">Horarios</a>
+      <a href="#comprar">Comprar</a>
+      <a href="#preguntas">Preguntas</a>
+    </nav>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main>
+
+    <!-- Portada -->
+    <section id="inicio">
+      <h2>Viaja seguro por todo el Ecuador</h2>
+      <p>Compra tus pasajes de bus interprovincial de forma rápida y sencilla.</p>
+      <a href="#comprar" class="boton">Comprar pasaje</a>
+    </section>
+
+    <!-- Rutas y precios -->
+    <section id="rutas">
+      <h2>Rutas y precios</h2>
+      <div class="rutas">
+        <article>
+          <h3>Quito - Guayaquil</h3>
+          <p>Duración: 8 horas</p>
+          <p class="precio">$12,50</p>
+        </article>
+        <article>
+          <h3>Quito - Cuenca</h3>
+          <p>Duración: 9 horas</p>
+          <p class="precio">$14,00</p>
+        </article>
+        <article>
+          <h3>Quito - Loja</h3>
+          <p>Duración: 12 horas</p>
+          <p class="precio">$18,00</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Horarios -->
+    <section id="horarios">
+      <h2>Horarios de salida</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Destino</th>
+            <th>Salida</th>
+            <th>Llegada</th>
+            <th>Servicio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Guayaquil</td>
+            <td>06:00</td>
+            <td>14:00</td>
+            <td>Normal</td>
+          </tr>
+          <tr>
+            <td>Cuenca</td>
+            <td>07:30</td>
+            <td>16:30</td>
+            <td>Ejecutivo</td>
+          </tr>
+          <tr>
+            <td>Loja</td>
+            <td>20:00</td>
+            <td>08:00</td>
+            <td>VIP</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Formulario de compra -->
+    <section id="comprar">
+      <h2>Compra tu pasaje</h2>
+      <form>
+        <fieldset>
+          <legend>Datos del viaje</legend>
+
+          <label for="ruta">Ruta</label>
+          <select id="ruta" name="ruta">
+            <option>Quito - Guayaquil</option>
+            <option>Quito - Cuenca</option>
+            <option>Quito - Loja</option>
+          </select>
+
+          <label for="fecha">Fecha</label>
+          <input type="date" id="fecha" name="fecha" required>
+
+          <label for="asiento">Número de asiento</label>
+          <input type="number" id="asiento" name="asiento" min="1" max="40" required>
+        </fieldset>
+
+        <fieldset>
+          <legend>Datos del pasajero</legend>
+
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" required>
+
+          <label for="cedula">Cédula</label>
+          <input type="text" id="cedula" name="cedula" required>
+
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" required>
+        </fieldset>
+
+        <button type="submit">Comprar pasaje</button>
+      </form>
+    </section>
+
+    <!-- Preguntas frecuentes -->
+    <section id="preguntas">
+      <h2>Preguntas frecuentes</h2>
+      <details>
+        <summary>¿Cuánto equipaje puedo llevar?</summary>
+        <p>Una maleta de hasta 25 kg y un bolso de mano.</p>
+      </details>
+      <details>
+        <summary>¿Con cuánta anticipación debo llegar?</summary>
+        <p>30 minutos antes de la salida.</p>
+      </details>
+    </section>
+
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <p>Terminal Quitumbe, Quito - Teléfono: 099 000 0000</p>
+    <p>&copy; 2026 Cooperativa Ruta Andina - Grupo 2</p>
+  </footer>
+
+</body>
+</html>
